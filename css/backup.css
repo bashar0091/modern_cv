@@ -1,0 +1,248 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/*color*/
+:root {
+ 	--primary: #1a253f;
+ 	--dark: #151A33;
+ 	--secondary: #2b55cc;
+ 	--info: #4d79f6;
+ 	--ternary: #848db3;
+ 	--pure: #eff2f9;
+ 	--fade: #7081b9;
+ 	--mild: #8997bd;
+ 	--footer: #212A4A;
+ 	--black: #060b1b;
+ 	--twitter: #4ac7ec;
+ 	--dribbble: #ff5da0;
+ 	--success: #1ecab8;
+ 	--danger: #f1646c;
+ 	--dark-blue: #28365f;
+}
+
+/*reset css*/
+* {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ 	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+ 	background-color: var(--dark);
+}
+a {
+ 	text-decoration: none;
+ 	color: var(--pure);
+}
+ul {
+	list-style-type: none;
+}
+span, p {
+	color: var(--ternary);
+	line-height: 1.4;
+	letter-spacing: 0.6px;
+}
+p {
+	margin: 0.8rem 0;
+}
+
+.container {
+ 	max-width: 1140px;
+ 	margin: 0 auto;
+}
+.title {
+	color: var(--pure);
+	font-size: 22px;
+	font-weight: 500;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 1.2rem;
+}
+.title::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	border: 2px dotted var(--danger);
+	margin-top: 5px;
+}
+.title-sm::after {
+	width: 55%;
+}
+.padding {
+	padding: 2rem 3rem;
+}
+.padding-rl {
+}
+.column-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+}
+.btn {
+	color: var(--info);
+	border: none;
+	font-size: 16px;
+	font-weight: 500;
+	background: var(--dark-blue);
+	padding: 13px 12px;
+	cursor: pointer;
+}
+.margin-auto {
+	margin: 0 auto;
+}
+
+header.header {
+	background-color: var(--primary);
+}
+header.header nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.6rem 0;
+	align-items: center;
+}
+header.header nav .logo a {
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: var(--pure);
+}
+header.header nav .logo a i {
+	color: var(--info);
+}
+header.header nav .print button {
+	font-size: 14px;
+	padding: 0.6rem 1rem;
+	border: none;
+	color: var(--pure);
+	background-color: var(--secondary);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+section.main-section .profile {
+	background-color: var(--black);
+	display: flex;
+	align-items: center;
+	padding: 3rem;
+	margin-top: 60px;
+	clip-path: polygon(0 0,100% 0,100% 80%,25% 100%,0 80%);
+	padding-bottom: 4rem;
+}
+section.main-section .profile .profile-left {
+	flex: 2;
+	display: flex;
+	align-items: center;
+}
+section.main-section .profile .profile-left .profile-img {
+	position: relative;
+	margin-right: 2rem;
+}
+section.main-section .profile .profile-left .profile-img img {
+	width: 128px;
+	height: 128px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+section.main-section .profile .profile-left .profile-img a {
+	position: absolute;
+	right: 4px;
+	bottom: 4px;
+	background-color: var(--info);
+	color: var(--pure);
+	padding: 1rem;
+	border-radius: 50%;
+	--adjust:  32px;
+	width: var(--adjust);
+	height: var(--adjust);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.main-section .profile .profile-left .profile-img a i {
+
+}
+section.main-section .profile .profile-left .profile-info h2 {
+	color: var(--fade);
+	font-weight: 600;
+}
+section.main-section .profile .profile-left .profile-info p {
+	color: var(--mild);
+	font-size: 1.5rem;
+}
+section.main-section .profile .profile-left .profile-info p b {
+	padding-bottom: 0.5rem;
+	font-weight: 400;
+}
+.cd-headline.loading-bar .cd-words-wrapper::after {
+	background: linear-gradient(to right, var(--secondary), var(--success));
+}
+
+section.main-section .profile .profile-right {
+	flex: 1;
+}
+section.main-section .profile .profile-right .profile-contact {
+	margin-bottom: 1.6rem;
+}
+section.main-section .profile .profile-right .profile-contact ul li {
+	color: var(--ternary);
+	margin-bottom: 0.7rem;
+	font-size: 14px;
+}
+section.main-section .profile .profile-right .profile-contact ul li i {
+	font-size: 18px;
+	margin-right: 0.3rem;
+}
+section.main-section .profile .profile-right .profile-social ul li {
+	display: inline-block;
+	margin-right: 0.8rem;
+}
+section.main-section .profile .profile-right .profile-social ul li a {
+	--lineheight: 36px;
+	display: inline-block;
+	width: var(--lineheight);
+	height: var(--lineheight);
+	border-radius: 50%;
+	line-height: var(--lineheight);
+	text-align: center;
+}
+section.main-section .profile .profile-right .profile-social ul li:nth-child(1) a {
+	background-color: var(--secondary);
+}
+section.main-section .profile .profile-right .profile-social ul li:nth-child(2) a {
+	background-color: var(--twitter);
+}
+section.main-section .profile .profile-right .profile-social ul li:nth-child(3) a {
+	background-color: var(--dribbble);
+}
+
+.main-section .container {
+	background-color: var(--primary);
+}
+
+.about .about-wrapper .about-wrapper-left h2 {
+	color: var(--info);
+	letter-spacing: 1px;
+}
+.about .about-wrapper .about-wrapper-right ul li {
+	margin-bottom: 0.8rem;
+}
+.about .about-wrapper .about-wrapper-right ul li span {
+	font-weight: 500;
+}
+.about .about-wrapper .about-wrapper-right ul li span:first-child {
+	display: inline-block;
+	width: 200px;
+	position: relative;
+}
+.about .about-wrapper .about-wrapper-right ul li span:first-child:after {
+	content: ":";
+	position: absolute;
+	right: 20px;
+}

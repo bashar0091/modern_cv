@@ -1,0 +1,34 @@
+@mixin before($top:0, $left:0, $width:100%, $height:100%) {
+	content: '';
+	position: absolute;
+	top: $top;
+	left: $left;
+	width: $width;
+	height: $height;
+}
+
+@mixin position-ab($top:0, $left:0) {
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+
+@mixin flex-center($val) {
+	display: flex;
+	flex-direction: column;
+	justify-content: $val;
+}
+
+@mixin column($column-no:1, $gap:1rem) {
+	display: grid;
+	grid-template-columns: repeat($column-no, 1fr);
+	grid-gap: $gap;
+}
+
+@mixin child($num:1){
+	&:nth-child#{'('($num)')'} {
+		.counter-icon i {
+			@content;
+		}
+	}
+}
